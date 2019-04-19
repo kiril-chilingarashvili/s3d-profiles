@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="Kirill - QIDI X-Pro PLA Left" version="2019-04-10 03:31:26" app="S3D-Software 4.1.1">
+<profile name="Kirill - QIDI X-Pro PETG Left" version="2019-03-07 19:50:56" app="S3D-Software 4.1.1">
   <baseProfile>Qidi Technology X-pro (modified)</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
@@ -25,7 +25,7 @@
     <diameter>0.4</diameter>
     <autoWidth>0</autoWidth>
     <width>0.4</width>
-    <extrusionMultiplier>0.99</extrusionMultiplier>
+    <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>1.4</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
@@ -86,7 +86,7 @@
   <internalInfillAngles>0</internalInfillAngles>
   <overlapInternalInfillAngles>0</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
-  <generateSupport>1</generateSupport>
+  <generateSupport>0</generateSupport>
   <supportExtruder>1</supportExtruder>
   <supportInfillPercentage>20</supportInfillPercentage>
   <supportExtraInflation>0</supportExtraInflation>
@@ -98,7 +98,7 @@
   <supportHorizontalPartOffset>0.15</supportHorizontalPartOffset>
   <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
   <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
-  <supportType>1</supportType>
+  <supportType>0</supportType>
   <supportGridSpacing>1</supportGridSpacing>
   <maxOverhangAngle>80</maxOverhangAngle>
   <supportAngles>0</supportAngles>
@@ -112,17 +112,17 @@
     <temperatureNumber>1</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="208"/>
+    <setpoint layer="1" temperature="242"/>
   </temperatureController>
   <temperatureController name="Heated Build Platform">
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>1</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="55"/>
+    <setpoint layer="1" temperature="75"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
-    <setpoint layer="2" speed="100"/>
+    <setpoint layer="2" speed="65"/>
   </fanSpeed>
   <blipFanToFullPower>0</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
@@ -173,7 +173,7 @@
   <celebration>0</celebration>
   <celebrationSong>Funky Town</celebrationSong>
   <postProcessing></postProcessing>
-  <defaultSpeed>2100</defaultSpeed>
+  <defaultSpeed>1800</defaultSpeed>
   <outlineUnderspeed>0.5</outlineUnderspeed>
   <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
@@ -192,7 +192,7 @@
   <useMinPrintHeight>0</useMinPrintHeight>
   <minPrintHeight>0</minPrintHeight>
   <useMaxPrintHeight>0</useMaxPrintHeight>
-  <maxPrintHeight>23.74</maxPrintHeight>
+  <maxPrintHeight>9.71</maxPrintHeight>
   <useDiaphragm>0</useDiaphragm>
   <diaphragmLayerInterval>20</diaphragmLayerInterval>
   <robustSlicing>1</robustSlicing>
@@ -238,7 +238,7 @@
       <diameter>0.4</diameter>
       <autoWidth>0</autoWidth>
       <width>0.4</width>
-      <extrusionMultiplier>0.99</extrusionMultiplier>
+      <extrusionMultiplier>1</extrusionMultiplier>
       <useRetract>1</useRetract>
       <retractionDistance>1.4</retractionDistance>
       <extraRestartDistance>0</extraRestartDistance>
@@ -259,17 +259,17 @@
       <temperatureNumber>1</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="208"/>
+      <setpoint layer="1" temperature="242"/>
     </temperatureController>
     <temperatureController name="Heated Build Platform">
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>1</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="55"/>
+      <setpoint layer="1" temperature="75"/>
     </temperatureController>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
-      <setpoint layer="2" speed="100"/>
+      <setpoint layer="2" speed="65"/>
     </fanSpeed>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="ABS">

@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<profile name="Kirill - QIDI X-Pro PLA Right" version="2018-08-29 16:33:59" app="S3D-Software 4.0.1">
+<profile name="Kirill - QIDI X-Pro PLA Right" version="2018-09-28 10:30:07" app="S3D-Software 4.0.1">
   <baseProfile>Qidi Technology X-pro (modified)</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
-  <printExtruders>Right Extruder Only</printExtruders>
+  <printExtruders>Left Extruder Only</printExtruders>
   <extruder name="Right Extruder">
     <toolheadNumber>0</toolheadNumber>
     <diameter>0.4</diameter>
@@ -36,13 +36,13 @@
     <useWipe>0</useWipe>
     <wipeDistance>5</wipeDistance>
   </extruder>
-  <primaryExtruder>0</primaryExtruder>
-  <layerHeight>0.1</layerHeight>
+  <primaryExtruder>1</primaryExtruder>
+  <layerHeight>0.2</layerHeight>
   <topSolidLayers>5</topSolidLayers>
-  <bottomSolidLayers>4</bottomSolidLayers>
-  <perimeterOutlines>4</perimeterOutlines>
+  <bottomSolidLayers>5</bottomSolidLayers>
+  <perimeterOutlines>5</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
-  <startPointOption>2</startPointOption>
+  <startPointOption>3</startPointOption>
   <startPointOriginX>0</startPointOriginX>
   <startPointOriginY>0</startPointOriginY>
   <sequentialIslands>0</sequentialIslands>
@@ -50,8 +50,8 @@
   <firstLayerHeightPercentage>90</firstLayerHeightPercentage>
   <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
-  <useRaft>0</useRaft>
-  <raftExtruder>0</raftExtruder>
+  <useRaft>1</useRaft>
+  <raftExtruder>1</raftExtruder>
   <raftTopLayers>3</raftTopLayers>
   <raftBaseLayers>2</raftBaseLayers>
   <raftOffset>3</raftOffset>
@@ -59,7 +59,7 @@
   <raftTopInfill>100</raftTopInfill>
   <aboveRaftSpeedMultiplier>0.3</aboveRaftSpeedMultiplier>
   <useSkirt>1</useSkirt>
-  <skirtExtruder>0</skirtExtruder>
+  <skirtExtruder>1</skirtExtruder>
   <skirtLayers>1</skirtLayers>
   <skirtOutlines>2</skirtOutlines>
   <skirtOffset>4</skirtOffset>
@@ -75,10 +75,10 @@
   <oozeShieldSidewallShape>1</oozeShieldSidewallShape>
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
-  <infillExtruder>0</infillExtruder>
+  <infillExtruder>1</infillExtruder>
   <internalInfillPattern>Fast Honeycomb</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>20</infillPercentage>
+  <infillPercentage>25</infillPercentage>
   <outlineOverlapPercentage>20</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>125</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
@@ -86,12 +86,12 @@
   <internalInfillAngles>0</internalInfillAngles>
   <overlapInternalInfillAngles>0</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
-  <generateSupport>0</generateSupport>
-  <supportExtruder>0</supportExtruder>
+  <generateSupport>1</generateSupport>
+  <supportExtruder>1</supportExtruder>
   <supportInfillPercentage>20</supportInfillPercentage>
   <supportExtraInflation>0</supportExtraInflation>
   <supportBaseLayers>1</supportBaseLayers>
-  <denseSupportExtruder>0</denseSupportExtruder>
+  <denseSupportExtruder>1</denseSupportExtruder>
   <denseSupportLayers>1</denseSupportLayers>
   <denseSupportInfillPercentage>70</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
@@ -107,16 +107,16 @@
     <isHeatedBed>0</isHeatedBed>
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
-    <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="210"/>
+    <stabilizeAtStartup>0</stabilizeAtStartup>
+    <setpoint layer="1" temperature="0"/>
   </temperatureController>
   <temperatureController name="Left Extruder">
     <temperatureNumber>1</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
-    <stabilizeAtStartup>0</stabilizeAtStartup>
-    <setpoint layer="1" temperature="0"/>
+    <stabilizeAtStartup>1</stabilizeAtStartup>
+    <setpoint layer="1" temperature="210"/>
   </temperatureController>
   <temperatureController name="Heated Build Platform">
     <temperatureNumber>0</temperatureNumber>
@@ -170,7 +170,7 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>G28 ; home all axes,T0 ; switch to right extruder,G1 X0 Y0 F3600 ; move to wait position,G92 A0 B0 ; zero independent extruders,G92 E0 ; zero extruder,G1 Y4 Z0.3 F3600 ; prepare to purge,G1 X230 E18 F2400 ; purge</startingGcode>
+  <startingGcode>G28 ; home all axes,T1 ; switch to left extruder,G1 X0 Y0 F3600 ; move to wait position,G92 A0 B0,G92 E0 ; zero extruder,G1 Y4 Z0.3 F3600 ; prepare to purge,G1 X230 E18 F2400 ; purge</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
@@ -179,7 +179,7 @@
   <celebration>0</celebration>
   <celebrationSong>Funky Town</celebrationSong>
   <postProcessing></postProcessing>
-  <defaultSpeed>2800</defaultSpeed>
+  <defaultSpeed>2400</defaultSpeed>
   <outlineUnderspeed>0.5</outlineUnderspeed>
   <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
@@ -198,7 +198,7 @@
   <useMinPrintHeight>0</useMinPrintHeight>
   <minPrintHeight>17.1</minPrintHeight>
   <useMaxPrintHeight>0</useMaxPrintHeight>
-  <maxPrintHeight>0</maxPrintHeight>
+  <maxPrintHeight>1.26</maxPrintHeight>
   <useDiaphragm>0</useDiaphragm>
   <diaphragmLayerInterval>20</diaphragmLayerInterval>
   <robustSlicing>1</robustSlicing>
@@ -261,7 +261,7 @@
       <relayBetweenLayers>0</relayBetweenLayers>
       <relayBetweenLoops>0</relayBetweenLoops>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="210"/>
+      <setpoint layer="1" temperature="205"/>
     </temperatureController>
     <temperatureController name="Left Extruder">
       <temperatureNumber>1</temperatureNumber>
@@ -539,11 +539,11 @@
     <supportInfillPercentage>25</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="Medium">
-    <layerHeight>0.1</layerHeight>
+    <layerHeight>0.2</layerHeight>
     <topSolidLayers>5</topSolidLayers>
-    <bottomSolidLayers>4</bottomSolidLayers>
+    <bottomSolidLayers>5</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>20</infillPercentage>
+    <infillPercentage>25</infillPercentage>
     <supportInfillPercentage>20</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
@@ -583,10 +583,10 @@
     <startingGcode>G28 ; home all axes,T1 ; switch to left extruder,G1 X0 Y0 F3600 ; move to wait position,G92 A0 B0,G92 E0 ; zero extruder,G1 Y4 Z0.3 F3600 ; prepare to purge,G1 X230 E18 F2400 ; purge</startingGcode>
   </autoConfigureExtruders>
   <autoConfigureExtruders name="Both Extruders" allowedToolheads="2">
-    <primaryExtruder>0</primaryExtruder>
+    <primaryExtruder>1</primaryExtruder>
     <raftExtruder>0</raftExtruder>
-    <skirtExtruder>0</skirtExtruder>
-    <infillExtruder>0</infillExtruder>
+    <skirtExtruder>1</skirtExtruder>
+    <infillExtruder>1</infillExtruder>
     <supportExtruder>0</supportExtruder>
     <denseSupportExtruder>0</denseSupportExtruder>
     <useSkirt>1</useSkirt>

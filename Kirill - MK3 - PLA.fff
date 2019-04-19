@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="Kirill - MK3 - PLA" version="2018-08-28 05:36:06" app="S3D-Software 4.0.1">
+<profile name="Kirill - MK3 - PLA" version="2019-04-19 22:43:48" app="S3D-Software 4.1.1">
   <baseProfile>Prusa Research Original Prusa i3 MK3 (modified)</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
@@ -15,26 +15,26 @@
     <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
     <retractionSpeed>2400</retractionSpeed>
-    <useCoasting>1</useCoasting>
+    <useCoasting>0</useCoasting>
     <coastingDistance>0.2</coastingDistance>
-    <useWipe>1</useWipe>
+    <useWipe>0</useWipe>
     <wipeDistance>2</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
-  <layerHeight>0.1</layerHeight>
-  <topSolidLayers>4</topSolidLayers>
-  <bottomSolidLayers>4</bottomSolidLayers>
+  <layerHeight>0.2</layerHeight>
+  <topSolidLayers>0</topSolidLayers>
+  <bottomSolidLayers>5</bottomSolidLayers>
   <perimeterOutlines>4</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
-  <startPointOption>2</startPointOption>
-  <startPointOriginX>0</startPointOriginX>
-  <startPointOriginY>0</startPointOriginY>
+  <startPointOption>3</startPointOption>
+  <startPointOriginX>125</startPointOriginX>
+  <startPointOriginY>210</startPointOriginY>
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
   <firstLayerHeightPercentage>150</firstLayerHeightPercentage>
   <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
-  <useRaft>1</useRaft>
+  <useRaft>0</useRaft>
   <raftExtruder>0</raftExtruder>
   <raftTopLayers>3</raftTopLayers>
   <raftBaseLayers>2</raftBaseLayers>
@@ -62,7 +62,7 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>20</infillPercentage>
+  <infillPercentage>0</infillPercentage>
   <outlineOverlapPercentage>20</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
@@ -72,25 +72,23 @@
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>0</generateSupport>
   <supportExtruder>0</supportExtruder>
-  <supportInfillPercentage>30</supportInfillPercentage>
-  <supportExtraInflation>0</supportExtraInflation>
+  <supportInfillPercentage>20</supportInfillPercentage>
+  <supportExtraInflation>1</supportExtraInflation>
   <supportBaseLayers>0</supportBaseLayers>
   <denseSupportExtruder>0</denseSupportExtruder>
-  <denseSupportLayers>0</denseSupportLayers>
-  <denseSupportInfillPercentage>70</denseSupportInfillPercentage>
+  <denseSupportLayers>3</denseSupportLayers>
+  <denseSupportInfillPercentage>45</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
   <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
   <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
   <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
-  <supportType>0</supportType>
+  <supportType>1</supportType>
   <supportGridSpacing>4</supportGridSpacing>
-  <maxOverhangAngle>45</maxOverhangAngle>
+  <maxOverhangAngle>50</maxOverhangAngle>
   <supportAngles>0</supportAngles>
   <temperatureController name="Primary Extruder">
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
-    <relayBetweenLayers>0</relayBetweenLayers>
-    <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
     <setpoint layer="1" temperature="215"/>
     <setpoint layer="2" temperature="210"/>
@@ -98,8 +96,6 @@
   <temperatureController name="Heated Bed">
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>1</isHeatedBed>
-    <relayBetweenLayers>0</relayBetweenLayers>
-    <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
     <setpoint layer="1" temperature="60"/>
   </temperatureController>
@@ -147,21 +143,21 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>M115 U3.0.7 ; use the latest firmware version,G28 W ; home all axes without mesh bed leveling,G80 ; run mesh bed leveling routine,G1 Y-3.0 F1000.0 ; prepare to prime,G92 E0 ; reset extrusion distance,G1 X60.0 E9.0  F1000.0 ; priming,G1 X100.0 E12.5  F1000.0 ; priming</startingGcode>
+  <startingGcode>M900 K0; Filament gcode,M115 U3.3.1 ; tell printer latest fw version,,G28 W ; home all without mesh bed level,G80 ; mesh bed leveling,,M900 K25; Filament gcode,,G1 Y-3.0 F1000.0 ; go outside print area,G92 E0.0,G1 X60.0 E9.0  F1000.0 ; intro line,G1 X100.0 E12.5  F1000.0 ; intro line,G92 E0.0,,M221 95</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
-  <endingGcode>G4 ; wait,M106 S0 ; turn off cooling fan,M104 S0 ; turn off extruder,M140 S0 ; turn off bed,G1 X0 Y200 ; part removal,M84 ; disable motors</endingGcode>
+  <endingGcode>G4 ; wait,M106 S0 ; turn off cooling fan,M104 S0 ; turn off extruder,M140 S0 ; turn off bed,G1 X0 Y200 ; part removal,M84 ; disable motors,M900 K0; Filament gcode</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Funky Town</celebrationSong>
   <postProcessing></postProcessing>
-  <defaultSpeed>4800</defaultSpeed>
+  <defaultSpeed>2700</defaultSpeed>
   <outlineUnderspeed>0.5</outlineUnderspeed>
   <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
-  <rapidXYspeed>12000</rapidXYspeed>
-  <rapidZspeed>1000</rapidZspeed>
+  <rapidXYspeed>6000</rapidXYspeed>
+  <rapidZspeed>1002</rapidZspeed>
   <minBridgingArea>50</minBridgingArea>
   <bridgingExtraInflation>0</bridgingExtraInflation>
   <bridgingExtrusionMultiplier>1</bridgingExtrusionMultiplier>
@@ -175,10 +171,10 @@
   <useMinPrintHeight>0</useMinPrintHeight>
   <minPrintHeight>0</minPrintHeight>
   <useMaxPrintHeight>0</useMaxPrintHeight>
-  <maxPrintHeight>0</maxPrintHeight>
+  <maxPrintHeight>155.32</maxPrintHeight>
   <useDiaphragm>0</useDiaphragm>
   <diaphragmLayerInterval>20</diaphragmLayerInterval>
-  <robustSlicing>1</robustSlicing>
+  <robustSlicing>0</robustSlicing>
   <mergeAllIntoSolid>0</mergeAllIntoSolid>
   <onlyRetractWhenCrossingOutline>1</onlyRetractWhenCrossingOutline>
   <retractBetweenLayers>1</retractBetweenLayers>
@@ -203,8 +199,6 @@
     <temperatureController name="Primary Extruder">
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
-      <relayBetweenLayers>0</relayBetweenLayers>
-      <relayBetweenLoops>0</relayBetweenLoops>
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="215"/>
       <setpoint layer="2" temperature="210"/>
@@ -250,12 +244,12 @@
     <supportInfillPercentage>25</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="Medium">
-    <layerHeight>0.1</layerHeight>
-    <topSolidLayers>4</topSolidLayers>
-    <bottomSolidLayers>4</bottomSolidLayers>
+    <layerHeight>0.2</layerHeight>
+    <topSolidLayers>0</topSolidLayers>
+    <bottomSolidLayers>5</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>20</infillPercentage>
-    <supportInfillPercentage>30</supportInfillPercentage>
+    <infillPercentage>0</infillPercentage>
+    <supportInfillPercentage>20</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
     <layerHeight>0.1</layerHeight>
