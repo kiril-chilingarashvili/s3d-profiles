@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="Kirill - MK3 - PETG" version="2019-04-19 23:47:27" app="S3D-Software 4.1.1">
+<profile name="Kirill - MK3 - PETG" version="2021-02-21 12:29:26" app="S3D-Software 4.1.2">
   <baseProfile>Prusa Research Original Prusa i3 MK3</baseProfile>
   <printMaterial>PETG</printMaterial>
   <printQuality>.15</printQuality>
@@ -9,22 +9,22 @@
     <diameter>0.4</diameter>
     <autoWidth>0</autoWidth>
     <width>0.47</width>
-    <extrusionMultiplier>0.99</extrusionMultiplier>
+    <extrusionMultiplier>0.96</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>1</retractionDistance>
+    <retractionDistance>0.4</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0.8</retractionZLift>
     <retractionSpeed>2400</retractionSpeed>
     <useCoasting>1</useCoasting>
     <coastingDistance>0.15</coastingDistance>
-    <useWipe>1</useWipe>
+    <useWipe>0</useWipe>
     <wipeDistance>2</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
   <layerHeight>0.2</layerHeight>
   <topSolidLayers>4</topSolidLayers>
-  <bottomSolidLayers>4</bottomSolidLayers>
-  <perimeterOutlines>4</perimeterOutlines>
+  <bottomSolidLayers>3</bottomSolidLayers>
+  <perimeterOutlines>2</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>3</startPointOption>
   <startPointOriginX>250</startPointOriginX>
@@ -62,7 +62,7 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Fast Honeycomb</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>25</infillPercentage>
+  <infillPercentage>10</infillPercentage>
   <outlineOverlapPercentage>30</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>2</minInfillLength>
@@ -90,8 +90,8 @@
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="244"/>
-    <setpoint layer="2" temperature="245"/>
+    <setpoint layer="1" temperature="237"/>
+    <setpoint layer="2" temperature="238"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>0</temperatureNumber>
@@ -102,10 +102,10 @@
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
-    <setpoint layer="3" speed="33"/>
+    <setpoint layer="3" speed="80"/>
   </fanSpeed>
   <blipFanToFullPower>0</blipFanToFullPower>
-  <adjustSpeedForCooling>0</adjustSpeedForCooling>
+  <adjustSpeedForCooling>1</adjustSpeedForCooling>
   <minSpeedLayerTime>15</minSpeedLayerTime>
   <minCoolingSpeedSlowdown>20</minCoolingSpeedSlowdown>
   <increaseFanForCooling>0</increaseFanForCooling>
@@ -209,8 +209,8 @@
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="244"/>
-      <setpoint layer="2" temperature="245"/>
+      <setpoint layer="1" temperature="237"/>
+      <setpoint layer="2" temperature="238"/>
     </temperatureController>
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
@@ -219,18 +219,18 @@
       <setpoint layer="1" temperature="90"/>
       <setpoint layer="2" temperature="88"/>
     </temperatureController>
-    <globalExtrusionMultiplier>0.99</globalExtrusionMultiplier>
+    <globalExtrusionMultiplier>0.96</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
-      <setpoint layer="3" speed="33"/>
+      <setpoint layer="3" speed="80"/>
     </fanSpeed>
   </autoConfigureMaterial>
   <autoConfigureQuality name=".15">
     <layerHeight>0.2</layerHeight>
     <topSolidLayers>4</topSolidLayers>
-    <bottomSolidLayers>4</bottomSolidLayers>
+    <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>25</infillPercentage>
+    <infillPercentage>10</infillPercentage>
     <supportInfillPercentage>20</supportInfillPercentage>
   </autoConfigureQuality>
 </profile>

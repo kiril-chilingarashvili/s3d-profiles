@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="Kirill - MK3 - PLA" version="2019-04-19 22:43:48" app="S3D-Software 4.1.1">
+<profile name="Kirill - MK3 - PLA" version="2021-03-08 21:03:39" app="S3D-Software 4.1.2">
   <baseProfile>Prusa Research Original Prusa i3 MK3 (modified)</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
@@ -11,24 +11,24 @@
     <width>0.4</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>1</retractionDistance>
+    <retractionDistance>0.5</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
-    <retractionZLift>0</retractionZLift>
-    <retractionSpeed>2400</retractionSpeed>
-    <useCoasting>0</useCoasting>
-    <coastingDistance>0.2</coastingDistance>
+    <retractionZLift>0.8</retractionZLift>
+    <retractionSpeed>1200</retractionSpeed>
+    <useCoasting>1</useCoasting>
+    <coastingDistance>0.15</coastingDistance>
     <useWipe>0</useWipe>
     <wipeDistance>2</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
   <layerHeight>0.2</layerHeight>
-  <topSolidLayers>0</topSolidLayers>
-  <bottomSolidLayers>5</bottomSolidLayers>
+  <topSolidLayers>4</topSolidLayers>
+  <bottomSolidLayers>4</bottomSolidLayers>
   <perimeterOutlines>4</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>3</startPointOption>
-  <startPointOriginX>125</startPointOriginX>
-  <startPointOriginY>210</startPointOriginY>
+  <startPointOriginX>250</startPointOriginX>
+  <startPointOriginY>105</startPointOriginY>
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
   <firstLayerHeightPercentage>150</firstLayerHeightPercentage>
@@ -62,7 +62,7 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>0</infillPercentage>
+  <infillPercentage>40</infillPercentage>
   <outlineOverlapPercentage>20</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
@@ -82,7 +82,7 @@
   <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
   <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
   <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
-  <supportType>1</supportType>
+  <supportType>0</supportType>
   <supportGridSpacing>4</supportGridSpacing>
   <maxOverhangAngle>50</maxOverhangAngle>
   <supportAngles>0</supportAngles>
@@ -91,7 +91,7 @@
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
     <setpoint layer="1" temperature="215"/>
-    <setpoint layer="2" temperature="210"/>
+    <setpoint layer="2" temperature="215"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>0</temperatureNumber>
@@ -158,8 +158,8 @@
   <supportUnderspeed>0.8</supportUnderspeed>
   <rapidXYspeed>6000</rapidXYspeed>
   <rapidZspeed>1002</rapidZspeed>
-  <minBridgingArea>50</minBridgingArea>
-  <bridgingExtraInflation>0</bridgingExtraInflation>
+  <minBridgingArea>10</minBridgingArea>
+  <bridgingExtraInflation>1</bridgingExtraInflation>
   <bridgingExtrusionMultiplier>1</bridgingExtrusionMultiplier>
   <bridgingSpeedMultiplier>1</bridgingSpeedMultiplier>
   <useFixedBridgingAngle>0</useFixedBridgingAngle>
@@ -171,10 +171,10 @@
   <useMinPrintHeight>0</useMinPrintHeight>
   <minPrintHeight>0</minPrintHeight>
   <useMaxPrintHeight>0</useMaxPrintHeight>
-  <maxPrintHeight>155.32</maxPrintHeight>
+  <maxPrintHeight>84</maxPrintHeight>
   <useDiaphragm>0</useDiaphragm>
   <diaphragmLayerInterval>20</diaphragmLayerInterval>
-  <robustSlicing>0</robustSlicing>
+  <robustSlicing>1</robustSlicing>
   <mergeAllIntoSolid>0</mergeAllIntoSolid>
   <onlyRetractWhenCrossingOutline>1</onlyRetractWhenCrossingOutline>
   <retractBetweenLayers>1</retractBetweenLayers>
@@ -190,7 +190,7 @@
   <externalThinWallType>0</externalThinWallType>
   <internalThinWallType>2</internalThinWallType>
   <thinWallAllowedOverlapPercentage>25</thinWallAllowedOverlapPercentage>
-  <singleExtrusionMinLength>1</singleExtrusionMinLength>
+  <singleExtrusionMinLength>0.5</singleExtrusionMinLength>
   <singleExtrusionMinPrintingWidthPercentage>50</singleExtrusionMinPrintingWidthPercentage>
   <singleExtrusionMaxPrintingWidthPercentage>200</singleExtrusionMaxPrintingWidthPercentage>
   <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
@@ -201,7 +201,7 @@
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="215"/>
-      <setpoint layer="2" temperature="210"/>
+      <setpoint layer="2" temperature="215"/>
     </temperatureController>
     <globalBedTemperature>60</globalBedTemperature>
     <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
@@ -245,10 +245,10 @@
   </autoConfigureQuality>
   <autoConfigureQuality name="Medium">
     <layerHeight>0.2</layerHeight>
-    <topSolidLayers>0</topSolidLayers>
-    <bottomSolidLayers>5</bottomSolidLayers>
+    <topSolidLayers>4</topSolidLayers>
+    <bottomSolidLayers>4</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>0</infillPercentage>
+    <infillPercentage>40</infillPercentage>
     <supportInfillPercentage>20</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
